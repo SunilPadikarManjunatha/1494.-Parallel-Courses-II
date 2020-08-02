@@ -24,3 +24,22 @@ Explanation: The figure above represents the given graph. In this case one optim
 
 Input: n = 11, dependencies = [], k = 2
 Output: 6
+
+
+Solution:
+I use reccursion to solve this problem.
+
+1. Finding root nodes. Which are nothing but subjects which does not have any dependency.
+
+2. if length of root node is less than or equal k, append subject(s) to the list.
+   else get combination of subjects of length (k),
+   than, for each subject combination get subjects whose dependencies are resolved.
+3. For new subject list, repeat the step 2.
+4. if new subject list is empty and all subjects are visited, then the length of the queue to the semister list.
+5. if legth of the semister list exceeds above nCr then exit.
+
+Finally, return minumum value from semister list.
+
+Let me know if you have any questions.
+
+Note: Code is not optimized, there is lot of room for improvement.
